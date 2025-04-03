@@ -1,0 +1,208 @@
+.gallery__container {
+  margin: auto;
+  max-width: 1184px;
+  display: grid;
+  gap: 20px;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "img1 img2 img3 img3"
+    "img4 img4 img5 img6";
+}
+.image__david {
+  grid-area: img1;
+  margin: 0;
+  max-width: 300px;
+  width: 100%;
+  max-height: 300px;
+  height: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.image__david:hover {
+  transform: scale(1.05);
+  transition: 0.25s;
+}
+.image__napoleon {
+  grid-area: img2;
+  margin: 0;
+  max-width: 300px;
+  width: 100%;
+  max-height: 300px;
+  height: 100%;
+  border-radius: 10px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.image__napoleon:hover {
+  transform: scale(1.05);
+  transition: 0.25s;
+}
+.image__anunciacion {
+  grid-area: img3;
+  margin: 0;
+  max-width: 600px;
+  width: 100%;
+  max-height: 300px;
+  height: 100%;
+  border-radius: 10px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.image__anunciacion:hover {
+  transform: scale(1.05);
+  transition: 0.25s;
+}
+.image__venus {
+  grid-area: img4;
+  margin: 0;
+  max-width: 600px;
+  width: 100%;
+  max-height: 300px;
+  height: 100%;
+  border-radius: 10px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.image__venus:hover {
+  transform: scale(1.05);
+  transition: 0.25s;
+}
+.image__terraza {
+  grid-area: img5;
+  margin: 0;
+  max-width: 300px;
+  width: 100%;
+  max-height: 300px;
+  height: 100%;
+  border-radius: 10px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.image__terraza:hover {
+  transform: scale(1.05);
+  transition: 0.25s;
+}
+.image__meninas {
+  grid-area: img6;
+  margin: 0;
+  max-width: 300px;
+  width: 100%;
+  max-height: 300px;
+  height: 100%;
+  border-radius: 10px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.image__meninas:hover {
+  transform: scale(1.05);
+  transition: 0.25s;
+}
+@media screen and (max-width: 1190px) {
+  .gallery__container {
+    gap: 15px;
+    max-width: 900px;
+    padding-top: 50px;
+  }
+  .image__david {
+    max-width: 250px;
+    width: 100%;
+    max-height: 250px;
+    height: 100%;
+  }
+  .image__napoleon {
+    max-width: 250px;
+    width: 100%;
+    max-height: 250px;
+    height: 100%;
+  }
+  .image__terraza {
+    max-width: 250px;
+    width: 100%;
+    max-height: 250px;
+    height: 100%;
+  }
+  .image__meninas {
+    max-width: 250px;
+    width: 100%;
+    max-height: 250px;
+    height: 100%;
+  }
+  .image__venus {
+    max-width: 510px;
+    width: 100%;
+    max-height: 250px;
+    height: 100%;
+  }
+  .image__anunciacion {
+    max-width: 510px;
+    width: 100%;
+    max-height: 250px;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .gallery__container {
+    grid-template-areas:
+      "img1 img2"
+      "img3 img3"
+      "img5 img6"
+      "img4 img4";
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 700px;
+  }
+  .image__david {
+    max-width: 350px;
+  }
+  .image__napoleon {
+    max-width: 350px;
+  }
+  .image__anunciacion {
+    max-width: 700px;
+  }
+  .image__meninas {
+    max-width: 350px;
+  }
+  .image__terraza {
+    max-width: 350px;
+  }
+  .image__venus {
+    max-width: 700px;
+  }
+}
+@media screen and (max-width: 340px) {
+  .gallery__container {
+    grid-template-areas:
+      "img1"
+      "img2"
+      "img3"
+      "img5"
+      "img6"
+      "img4";
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 320px;
+  }
+  .image__david {
+    max-width: 350px;
+  }
+  .image__napoleon {
+    max-width: 350px;
+  }
+  .image__anunciacion {
+    max-width: 350px;
+    height: 250px;
+  }
+  .image__meninas {
+    max-width: 350px;
+  }
+  .image__terraza {
+    max-width: 350px;
+  }
+  .image__venus {
+    max-width: 700px;
+    height: 250px;
+  }
+}

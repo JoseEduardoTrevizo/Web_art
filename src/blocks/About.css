@@ -1,0 +1,24 @@
+.about {
+  display: flex;
+}
+.about__container {
+  margin: auto;
+  width: 600px;
+  background-color: rgb(255, 245, 203);
+  border-radius: 10px;
+}
+.about__title {
+  margin: auto;
+  max-width: 200px;
+}
+.about__text {
+  margin: 0;
+  font-size: 19px;
+  text-align: justify;
+  padding: 25px 10px 10px;
+}
+@media screen and (max-width: 340px) {
+  .about__container {
+    max-width: 320px;
+  }
+}
