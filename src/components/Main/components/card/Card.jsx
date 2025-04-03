@@ -1,8 +1,9 @@
 import React from "react";
 import { useContext } from "react";
+import CurrentContext from "../../../../contexts/CurrentContext";
 import renacimiento from "../../../../Images/Renacimiento.webp";
 
-export default function Card() {
+export default function Card({ card }) {
   return (
     <div className="element">
       <div className="elements-card">

@@ -4,6 +4,8 @@ import Header from "./Header/Header";
 import Home from "./Home/Home";
 import Footer from "./Footer/Footer";
 import Main from "./Main/Main";
+import CurrentContext from "../contexts/CurrentContext";
+import api from "../utils/api";
 
 function App() {
   return (

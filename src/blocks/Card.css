@@ -43,6 +43,10 @@
   font-size: medium;
   z-index: 100;
 }
+.elementPreloader {
+  display: flex;
+  justify-content: center;
+}
 @media screen and (max-width: 1190px) {
   .elements {
     grid-template-columns: repeat(2, 1fr);

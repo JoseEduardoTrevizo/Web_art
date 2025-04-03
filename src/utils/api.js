@@ -3,9 +3,13 @@ class Api {
     this.baseUrl = baseUrl;
   }
 
-  getObject() {
+  getObject({ title, primaryImage }) {
     return fetch(`${this.baseUrl}/objects/[objectID]`, {
       method: "GET",
+      body: JSON.stringify({
+        title,
+        primaryImage,
+      }),
     })
       .then((res) => {
         if (res.ok) {
@@ -38,3 +42,5 @@ class Api {
 const api = new Api({
   baseUrl: "https://collectionapi.metmuseum.org/public/collection/v1",
 });
+
+export default api;
