@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import Preloader from "./components/Preloader/Preloader";
-import CurrentContext from "../../contexts/CurrentContext";
-import { useContext, Suspense, lazy } from "react";
-const Card = lazy(() => import("./components/card/Card"));
+import Card from "./components/card/Card";
 
-export default function Main() {
+export default function Main({ cards }) {
   const [preloader, setPreolader] = useState(false);
-
+  console.log(cards);
   function handleSubmit(evt) {
     setPreolader(true);
   }
@@ -29,12 +27,9 @@ export default function Main() {
             <Preloader />
           ) : (
             <>
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
+              {cards.map((card, index) => {
+                return <Card card={card} key={index} />;
+              })}
             </>
           )}
         </section>

@@ -3,23 +3,30 @@ class Api {
     this.baseUrl = baseUrl;
   }
 
-  getObject({ title, primaryImage }) {
-    return fetch(`${this.baseUrl}/objects/[objectID]`, {
+  getObject() {
+    return fetch(`${this.baseUrl}/objects?departmentIds=11`, {
       method: "GET",
-      body: JSON.stringify({
-        title,
-        primaryImage,
-      }),
     })
       .then((res) => {
+        //res, regresa todos los objectos del deparatamento de la API
         if (res.ok) {
           return res.json();
         }
-        //Si devuelve error se rechaza el promise
-        return Promise.reject(`Error:${res.status}`);
       })
-      .catch((err) => {
-        console.err(err);
+      .then((res) => {
+        //firstObject regresa solo 30 elementos de res
+        const firstObject = res.objectIDs.slice(9, 18);
+
+        return Promise.all(
+          firstObject.map((item) => {
+            return fetch(`${this.baseUrl}/objects/` + item).then((res) =>
+              res.json()
+            );
+          })
+        ).then((res) => {
+          console.log(res);
+          return res;
+        });
       });
   }
 
