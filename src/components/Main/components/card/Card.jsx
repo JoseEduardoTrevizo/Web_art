@@ -1,7 +1,5 @@
 import React from "react";
-import { useContext } from "react";
-import CurrentContext from "../../../../contexts/CurrentContext";
-import renacimiento from "../../../../Images/Renacimiento.webp";
+import placeholder from "../../../../Images/placeholder.jpg";
 
 export default function Card({ card }) {
   console.log(card);
@@ -10,7 +8,7 @@ export default function Card({ card }) {
       <div className="element">
         <div className="elements-card">
           <img
-            src={card.primaryImage}
+            src={card.primaryImage || { placeholder }}
             alt={card.title}
             className="elements-card__element"
             id="image_card"
