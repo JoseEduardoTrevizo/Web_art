@@ -1,12 +1,35 @@
-# React + Vite
+<h1 align="left">Web-Art</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+###
 
-Currently, two official plugins are available:
+<h2 align="left">Proyecto final TripleTen</h2>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+###
 
-## Expanding the ESLint configuration
+<h2 align="left">De que trata</h2>
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+###
+
+<p align="left">Arte digital es una plataforma diseñada para dar visibilidad a galerías de arte e historia, en colaboracion con el Museo Metropolitano de Arte que ofrece conjuntos de datos selectos con información sobre más de 470.000 obras de arte de su Colección para uso comercial de más de 5000 años de arte de todo el mundo para que todos puedan experimentarlo y disfrutarlo.</p>
+
+<img src="src/Images/home.png" border="0" width="700" height="500" />
+<img src="src/Images/search.png" border="0" width="700" height="500" />
+
+
+###
+
+<h2 align="left">Link del proyecto: https://joseeduardotrevizo.github.io/home</h2>
+
+###
+
+<div align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="javascript logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" alt="react logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" alt="html5 logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="40" alt="css3 logo"  />
+</div>
+
+###
