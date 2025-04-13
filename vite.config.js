@@ -8,4 +8,5 @@ export default defineConfig({
     port: 3000, // Cambia el número de puerto a 3000.
     open: true,
   },
+  base: "https://JoseEduardoTrevizo.github.io/Web_art",
 });
