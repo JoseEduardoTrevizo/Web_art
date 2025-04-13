@@ -15,9 +15,9 @@
     transform: rotate(360deg);
   }
 }
-.spinnContainer {
+.spinnerContainer {
   display: flex;
   margin: auto;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  right: 50%;
 }

@@ -1,13 +1,26 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Preloader from "./components/Preloader/Preloader";
 import Card from "./components/card/Card";
+import api from "../../utils/api";
 
-export default function Main({ cards }) {
+export default function Main({ cards, setCards }) {
   const [preloader, setPreolader] = useState(false);
-  console.log(cards);
-  function handleSubmit(evt) {
+  const inputRef = useRef();
+
+  const handleSearch = (evt) => {
+    const searchValue = inputRef.current.value;
+    //mandar el dato search value a API
     setPreolader(true);
-  }
+    api
+      .getSearch(searchValue)
+      .then((res) => {
+        setCards(res);
+        setPreolader(false);
+        setResult(res);
+      })
+      .catch((error) => console.error(error));
+  };
+
   return (
     <>
       <main className="content">
@@ -16,12 +29,14 @@ export default function Main({ cards }) {
             <input
               className="search__input"
               placeholder="Buscar galeria, obra, autor, pintura..."
+              ref={inputRef}
             ></input>
-            <button className="search__button" onClick={handleSubmit}>
+            <button className="search__button" onClick={handleSearch}>
               Buscar
             </button>
           </div>
         </section>
+
         <section className="elements">
           {preloader ? (
             <Preloader />

@@ -12,10 +12,11 @@ class Api {
         if (res.ok) {
           return res.json();
         }
+        return Promise.reject(`Error:${res.status}`);
       })
       .then((res) => {
         //firstObject regresa solo 30 elementos de res
-        const firstObject = res.objectIDs.slice(9, 18);
+        const firstObject = res.objectIDs.slice(40, 46);
 
         return Promise.all(
           firstObject.map((item) => {
@@ -24,14 +25,13 @@ class Api {
             );
           })
         ).then((res) => {
-          console.log(res);
           return res;
         });
       });
   }
 
-  getSearch() {
-    return fetch(`${this.baseUrl}/search`, {
+  getSearch(serachValue) {
+    return fetch(`${this.baseUrl}/search?q=${serachValue || "sunflowers"}`, {
       method: "GET",
     })
       .then((res) => {
@@ -40,8 +40,20 @@ class Api {
         }
         return Promise.reject(`Error:${res.status}`);
       })
-      .catch((err) => {
-        console.err(err);
+      .then((res) => {
+        const filter = res.objectIDs.slice(0, 9);
+        return Promise.all(
+          filter.map((item) => {
+            return fetch(`${this.baseUrl}/objects/` + item).then((res) => {
+              if (res.ok) {
+                return res.json();
+              }
+              return Promise.all.reject(`Error:${res.status}`);
+            });
+          })
+        ).then((res) => {
+          return res;
+        });
       });
   }
 }
