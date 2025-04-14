@@ -24,6 +24,7 @@ function App() {
       <CurrentContext.Provider value={{ cards }}>
         <Header />
         <Routes>
+          <Route path="/Web_art" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route
             path="/search"
