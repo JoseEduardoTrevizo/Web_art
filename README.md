@@ -18,7 +18,7 @@
 
 ###
 
-<h2 align="left">Link del proyecto: https://joseeduardotrevizo.github.io/home</h2>
+<h2 align="left">Link del proyecto: https://joseeduardotrevizo.github.io/Web_art/</h2>
 
 ###
 
